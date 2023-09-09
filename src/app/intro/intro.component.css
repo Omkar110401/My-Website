@@ -214,7 +214,7 @@
   }
 
   .card {
-      border-radius: 15px;
+      border-radius: 12px 25px 12px;
       /* Card styles */
       position: relative;
       width: 360px;
@@ -714,54 +714,45 @@
   .side-heading {
     margin-left: 10px;
     text-align: center;
-      font-size: 30px;
-      color: white;
-      letter-spacing: 3px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    width: 83%;
+    height: 120px;
+    margin-right: 10px;
   }
-
-
-  @media (max-width: 768px) {
-      .card {
-          width: 260px;
-          margin-right: 35px;
-      }
-
-      .side-content {
-          display: none;
-      }
-  }
-
-
-  .side-heading {
-      position: relative;
-      width: 83%;
-      height: 120px;
-      margin-right: 10px;
-  }
-
-  .side-heading>h2 {
+  
+  .side-heading > h2 {
     opacity: 0;
-      color: rgb(255, 255, 255);
-      font-size: 45px;
-      animation: getHeading 10s linear forwards;
-      animation-delay: 5s;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    animation: getHeading 10s linear forwards;
+    animation-delay: 5s;
+    transition: color 1s; /* Added transition for color change */
   }
-
-  @keyframes getHeading{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+  
+  .side-heading > h2:hover {
+    cursor: pointer;
+    /* Apply a linear gradient as a background when hovering */
+    background: linear-gradient(to right, #5c0064, #73007e);
+    -webkit-background-clip: text; /* This is for webkit browsers like Chrome */
+    color: transparent; /* Set text color to transparent */
   }
-
-  .side-heading>h2:after {
-      position: absolute;
-      content: "";
-      width: 80%;
-      height: 100%;
-      line-height: 48px;
-      left: 15%;
-      /* animation: abomination1 6s linear 1; */
-      /* animation-fill-mode: forwards; */
+  
+  @keyframes getHeading {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .side-heading > h2:after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 100%;
+    line-height: 48px;
+    left: 15%;
   }
 
   /* @keyframes abomination1 {
@@ -1361,3 +1352,15 @@
     }
   }
 
+
+
+  @media (max-width: 768px) {
+    .card {
+        width: 260px;
+        margin-right: 35px;
+    }
+
+    .side-content {
+        display: none;
+    }
+}
