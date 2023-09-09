@@ -11,6 +11,9 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { IntroComponent } from './intro/intro.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { InternshipComponent } from './internship/internship.component';
+import { SkillComponent } from './skill/skill.component';
+import { CommonModule } from '@angular/common';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { InternshipComponent } from './internship/internship.component';
     ContactMeComponent,
     IntroComponent,
     TimelineComponent,
-    InternshipComponent
+    InternshipComponent,
+    SkillComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

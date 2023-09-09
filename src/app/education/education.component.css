@@ -1,0 +1,51 @@
+.education-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .education{
+    /* border: 1px solid black; */
+    padding: 2em;
+    
+  }
+  
+  .inner-education{
+    border-radius: 15px;
+    padding: 1em;
+    background-color: rgb(173, 128, 216);
+    
+  }
+  .education-heading h2 {
+    letter-spacing: 2px;
+    font-size: 40px;
+  }
+  
+  .education-heading h2>span{
+    color:#4700a3;
+      text-shadow: 5px 5px 5px #a251ff;
+  }
+  
+  .hover {
+    color: #0000;
+    background:
+        linear-gradient(90deg, #4700a3 50%, #000 0) var(--_p, 100%)/200% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: .4s;
+  }
+  
+  .hover:hover {
+    cursor: pointer;
+    --_p: 0%;
+    text-shadow: 5px 5px 5px #a251ff;
+  }
+  
+  .education-heading img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  
+  
+  

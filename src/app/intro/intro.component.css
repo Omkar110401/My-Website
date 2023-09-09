@@ -220,7 +220,7 @@
       width: 360px;
       min-height: 400px;
       background: #fff;
-      box-shadow: 15px 15px 60px rgba(0, 0, 0, .15);
+      box-shadow: 15px 15px 60px rgb(44, 0, 65);
       padding: 20px;
       height: 450px;
       transform-style: preserve-3d;
@@ -376,9 +376,16 @@
       border: 0.5px solid black;
       animation: changeColor 10s;
       animation-delay: 3.2s;
+      background-color: rgb(231, 223, 255);
   }
 
   @keyframes changeColor{
+    0%{
+        background-color: white;
+    }
+    15%{
+        background-color: rgb(254, 243, 255);
+    }
     25%{
         background-color: #f5e9ff;
     }
@@ -396,6 +403,9 @@
     }
     90%{
         background-color: #f1ddff;
+    }
+    100%{
+        background-color: #ebddff;
     }
   }
 
@@ -570,6 +580,7 @@
       }
 
       100% {
+
           content: "The remarkable thing about technology is its ever-evolving nature. It's a perpetual dance between the known and the unknown, where each discovery is a stepping stone to a greater mystery. As we navigate this intricate waltz, we unlock the secrets of the universe and pave the way for a brighter, more interconnected world.";
       }
   }
@@ -733,13 +744,6 @@
     transition: color 1s; /* Added transition for color change */
   }
   
-  .side-heading > h2:hover {
-    cursor: pointer;
-    /* Apply a linear gradient as a background when hovering */
-    background: linear-gradient(to right, #5c0064, #73007e);
-    -webkit-background-clip: text; /* This is for webkit browsers like Chrome */
-    color: transparent; /* Set text color to transparent */
-  }
   
   @keyframes getHeading {
     0% { opacity: 0; }
@@ -753,6 +757,14 @@
     height: 100%;
     line-height: 48px;
     left: 15%;
+  }
+
+  .side-heading:hover > h2 {
+    cursor:pointer;
+    background: linear-gradient(to right, #5c0064, #73007e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   /* @keyframes abomination1 {
