@@ -10,6 +10,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { IntroComponent } from './intro/intro.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { InternshipComponent } from './internship/internship.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     NotFoundComponent,
     ContactMeComponent,
     IntroComponent,
-    TimelineComponent
+    TimelineComponent,
+    InternshipComponent
   ],
   imports: [
     BrowserModule,
