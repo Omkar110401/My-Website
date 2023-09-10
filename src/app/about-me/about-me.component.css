@@ -12,6 +12,16 @@
     margin-bottom: 20px;
 }
 
+.about-me-heading img:hover{
+    animation: rotateImage 3s;
+    animation-iteration-count: 3;
+}
+
+@keyframes rotateImage{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
 .about-me-heading h2 {
     letter-spacing: 2px;
     font-size: 40px;
@@ -19,7 +29,7 @@
 
 .about-me-heading h2 span {
     color: #5c07cc;
-    text-shadow: 5px 5px 5px #bb80ff;
+    text-shadow: 2px 2px 2px #c28dff;
 }
 
 
@@ -35,7 +45,7 @@
 .hover:hover {
     cursor: pointer;
     --_p: 0%;
-    text-shadow: 5px 5px 5px #bb80ff;
+    /* text-shadow: 5px 5px 5px #bb80ff; */
 }
 
 .about-me-heading img {
@@ -84,6 +94,42 @@
     /* Fully opaque when hovering */
 }
 
+@keyframes hidecomp {
+    0%{opacity: 1;}
+    25%{opacity: 0.75;}
+    50%{opacity: 0.5;}
+    75%{opacity: 0.25;}
+    100%{opacity: 0;}
+  }
+
+  .hide-component{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .show-component{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .hide-pic{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .show-pic{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+
+  @keyframes getcomp {
+    0%{opacity: 0;}
+    25%{opacity: 0.25;}
+    50%{opacity: 0.5;}
+    75%{opacity: 0.75;}
+    100%{opacity: 1;}
+  }
 
 @keyframes picAnimate {
     10% {

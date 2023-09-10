@@ -5,15 +5,10 @@
   justify-content: center;
 }
 
-.outer-intern{
-  /* border: 1px solid black; */
-  padding: 2em;
-  background-color: rgb(226, 191, 255);
-}
 
 .inner-intern{
-  border-radius: 15px;
   padding: 1em;
+  background-color: rgb(171, 130, 218);
   
 }
 .intern-heading h2 {
@@ -22,14 +17,14 @@
 }
 
 .intern-heading h2>span{
-  color:#4700a3;
-    text-shadow: 5px 5px 5px #a251ff;
+  color:#6200ff;
+    text-shadow: 2px 2px 2px #7700ff;
 }
 
 .hover {
   color: #0000;
   background:
-      linear-gradient(90deg, #4700a3 50%, #000 0) var(--_p, 100%)/200% no-repeat;
+      linear-gradient(90deg, #4800bb 50%, #000 0) var(--_p, 100%)/200% no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   transition: .4s;
@@ -38,7 +33,7 @@
 .hover:hover {
   cursor: pointer;
   --_p: 0%;
-  text-shadow: 5px 5px 5px #a251ff;
+  /* text-shadow: 5px 5px 5px #7700ff; */
 }
 
 .intern-heading img {
@@ -46,8 +41,18 @@
   height: 40px;
   margin-right: 20px;
 }
+.intern-heading img:hover{
+  animation: moveUp 2s linear forwards;
+  animation-iteration-count: 3;
+}
 
-
+@keyframes moveUp{
+  0%{transform: translateY(0);}
+  25%{transform: translateY(1em);}
+  50%{transform: translateY(0);}
+  75%{transform: translateY(-1em);}
+  100%{transform: translateY(0);}
+}
 .project-card {
   display: flex;
   justify-content: space-around;
@@ -55,7 +60,8 @@
 }
 
 
-.card {
+
+.card1, .card3 {
   background-color: white;
   color: #1a1a1a;
   display: block;
@@ -68,13 +74,13 @@
   margin: 1em;
 }
 
-.card img {
+.card1 img, .card3 img {
   width: 200px;
   height: 200px;
   border-radius: 10px 10px 0 0;
 }
 
-.hidden {
+.hidden1, .hidden3 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -88,24 +94,24 @@
   color: white;
 }
 
-.hidden a{
+.hidden1 a, .hidden3 a{
   color: white;
 }
 
-.hidden2 a{
+.hidden2 a, .hidden4 a{
   color: black;
 }
 
-.card:hover {
+.card1:hover, .card3:hover {
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
 
-.card:hover .hidden {
+.card1:hover .hidden1, .card3:hover .hidden3 {
   height: 100%;
 }
 
 
-.card2 {
+.card2, .card4 {
   background-color: #2f005a;
   color: white;
   display: block;
@@ -118,13 +124,13 @@
   margin:1em;
 }
 
-.card2 img {
+.card2 img, .card4 img {
   width: 200px;
   height: 200px;
   border-radius: 5px 5px 0 0;
 }
 
-.hidden2 {
+.hidden2, .hidden4 {
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -144,11 +150,11 @@ article{
   font-weight: 600;
 }
 
-.card2:hover {
+.card2:hover, .card4:hover {
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
 
-.card2:hover .hidden2 {
+.card2:hover .hidden2, .card4:hover .hidden4 {
   height: 100%;
   bottom: 0;
 }
@@ -166,23 +172,38 @@ a{
   text-decoration: none;
 }
 
-.hidden a:hover{
+.hidden1 a:hover, .hidden3 a:hover{
   color:pink;
 }
 
-.hidden2 a:hover{
+.hidden2 a:hover, .hidden4 a:hover{
   color: #8400ff;
 }
+
+.hide-component{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show-component{
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 @media (max-width:768px){
   .intern-heading h2{
     font-size: 24px;
   }
+  .card1,.card2, .card3, .card4{
+    width: 100%;
+    height: 400px;
+  }
 }
 
 @media (min-width:1000px){
-  .card,
-  .card2{
-    width: 80%;
+  .card1,.card2,
+  .card3, .card4{
+    width: 90%;
   }
 }

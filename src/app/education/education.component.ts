@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EDUCATION } from './education-data';
 
 @Component({
   selector: 'app-education',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
-
+  education=EDUCATION;
 }

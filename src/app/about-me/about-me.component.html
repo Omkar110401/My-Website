@@ -1,12 +1,12 @@
-<div class="about-me">
+<div class="about-me" [ngClass]="{'hide-component':!isScrolled300, 'show-component':isScrolled300}">
     <div class="about-me-inner">
         <div class="about-me-heading">
             <img src="..\assets\images\about-icon.png" alt="">
             <h2 class="hover">A bit <span>About Me</span></h2>
         </div>
-        <div class="pic-text">
-            <div class="about-pic">
-                <img src="..\assets\images\personal-pic.jpg" alt="">
+        <div class="pic-text" [ngClass]="{'hide-component':!isScrolled400, 'show-component':isScrolled400}">
+            <div class="about-pic" [ngClass]="{'hide-pic':!isScrolled450, 'show-pic':isScrolled450}">
+                <img src="..\assets\images\personal-pic.jpg" alt="" class="rotate-on-scroll">
             </div>
             <div class="about-text">
                 <p>I am an accomplished IT student with a strong focus on application development and a diverse skill

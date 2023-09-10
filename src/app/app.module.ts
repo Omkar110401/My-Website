@@ -14,6 +14,9 @@ import { InternshipComponent } from './internship/internship.component';
 import { SkillComponent } from './skill/skill.component';
 import { CommonModule } from '@angular/common';
 import { EducationComponent } from './education/education.component';
+import { LazyLoadDirective } from './lazy-load.directive';
+import { ProjectsComponent } from './projects/projects.component';
+import { ShortTimelineComponent } from './short-timeline/short-timeline.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { EducationComponent } from './education/education.component';
     TimelineComponent,
     InternshipComponent,
     SkillComponent,
-    EducationComponent
+    EducationComponent,
+    LazyLoadDirective,
+    ProjectsComponent,
+    ShortTimelineComponent
   ],
   imports: [
     BrowserModule,

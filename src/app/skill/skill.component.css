@@ -6,25 +6,25 @@
 }
 
 .outer-skills{
-    /* border: 1px solid black; */
-    padding: 2em;
+  padding:2em;
 }
 
 .inner-skills{
     /* border: 1px solid black; */
     border-radius: 15px;
-    padding: 0;
-    background-color: rgb(194, 172, 255);
+    padding: 1em;
+    background-color: rgb(235, 235, 235);
+    
 }
 .skills-heading h2 {
     font-size: 40px;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 
 .skills-heading h2 span{
     color: #5c07cc;
-    text-shadow: 5px 5px 5px #bb80ff;
+    text-shadow: 2px 2px 2px #bb80ff;
 }
 
 .hover {
@@ -39,13 +39,36 @@
 .hover:hover {
     cursor: pointer;
     --_p: 0%;
-    text-shadow: 5px 5px 5px #bb80ff;
+    /* text-shadow: 5px 5px 5px #bb80ff; */
 }
 
 .skills-heading img {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+}
+
+.skills-heading img:hover{
+  animation: moveLeft 2s linear forwards;
+  animation-iteration-count: 3;
+}
+
+@keyframes moveLeft{
+  0%{
+    transform:translate(0);
+  }
+  25%{
+    transform: translateX(-0.5em);
+  }
+  50%{
+    transform: translateX(-1em);
+  }
+  75%{
+    transform: translateX(-0.5em);
+  }
+  100%{
+    transform: translateX(0);
+  }
 }
 
 .ag-format-container {
@@ -65,6 +88,16 @@
     padding: 50px 0;
   }
 
+  .hide-outer{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .show-outer{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
 
   .ag-courses_item {
     -ms-flex-preferred-size: calc(33.33333% - 30px);
@@ -76,14 +109,17 @@
   
     border-radius: 28px;
   }
+
   .ag-courses-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: #747474;
+    background-color: #333333;
     overflow: hidden;
     position: relative;
     text-decoration: none;
   }
+
+
   .ag-courses-item_link:hover,
   .ag-courses-item_link:hover .ag-courses-item_date {
     text-decoration: none;

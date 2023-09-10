@@ -1,15 +1,15 @@
-<div class="outer-intern">
+<div class="outer-intern" [ngClass]="{'hide-component':!isScrolled2450, 'show-component':isScrolled2450}">
     <div class="intern-heading">
         <img src="..\assets\images\portfolio.png" alt="">
         <h2 class="hover"><span>Internship </span>Portfolio</h2>
     </div>
-    <div class="inner-intern">
+    <div class="inner-intern" [ngClass]="{'hide-component':!isScrolled2500, 'show-component':isScrolled2500}">
         <div class="project-card">
-            <div class="card">
+            <div class="card1" [ngClass]="{'hide-component':!isScrolled2600, 'show-component':isScrolled2600}">
                 <img src="..\assets\images\niq.webp" alt="Image">
                 <h1>NielsenIQ (NIQ)</h1>
                 <h3>Pune, India</h3>
-                <div class="hidden">
+                <div class="hidden1">
                     <a href="https://nielseniq.com/global/en/" target="_blank"><span>NielsenIQ</span></a>
                     <ul class="list">
                         <li class="skill-list">Java</li>
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="card2">
+            <div class="card2" [ngClass]="{'hide-component':!isScrolled2800, 'show-component':isScrolled2800}">
                 <img src="..\assets\images\kizora.webp" alt="Image">
                 <h1>Kizora Softwares</h1>
                 <h3>Nagpur, India</h3>
@@ -54,11 +54,11 @@
                 </div>
             </div>
 
-            <div class="card2">
+            <div class="card3" [ngClass]="{'hide-component':!isScrolled2900, 'show-component':isScrolled2900}">
                 <img src="..\assets\images\persistent.png" alt="Image">
                 <h1>Persistent Systems</h1>
                 <h3>Nagpur, India (Remote)</h3>
-                <div class="hidden2">
+                <div class="hidden3">
                     <a href="https://www.persistent.com/" target="_blank"><span>Persistent</span></a>
                     <ul class="list">
                         <li class="skill-list">Java</li>
@@ -72,11 +72,11 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card4" [ngClass]="{'hide-component':!isScrolled3100, 'show-component':isScrolled3100}">
                 <img src="..\assets\images\ksi.png" alt="Image">
                 <h1>Knoweldge Solutions India</h1>
                 <h3>Nagpur, India (Remote)</h3>
-                <div class="hidden">
+                <div class="hidden4">
                     <a href="#"><span>Knoweldge Solutions India</span></a>
                     <ul class="list">
                         <li class="skill-list">Python</li>
